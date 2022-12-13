@@ -1,0 +1,206 @@
+{
+	"info": {
+		"_postman_id": "ddf0cfaf-a6d3-4d5e-ad6b-2b4764d945fd",
+		"name": "demo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "registered",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/registered",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"registered"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "test",
+							"type": "default"
+						},
+						{
+							"key": "password",
+							"value": "test",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/login?grant_type=password&scope",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"login"
+					],
+					"query": [
+						{
+							"key": "grant_type",
+							"value": "password"
+						},
+						{
+							"key": "scope",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "secret",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/secret",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"secret"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "access_token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/access_token?grant_type=client_credentials&scope&client_id=test2&client_secret=test-secret2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"access_token"
+					],
+					"query": [
+						{
+							"key": "grant_type",
+							"value": "client_credentials"
+						},
+						{
+							"key": "scope",
+							"value": null
+						},
+						{
+							"key": "client_id",
+							"value": "test2"
+						},
+						{
+							"key": "client_secret",
+							"value": "test-secret2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "refresh",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/login?grant_type=refresh_token&scope&refresh_token=MDA2ZJU4YZITMTRIOC01MGU2LTKWYJCTZGY0ZGY3OWY5MZEY",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"login"
+					],
+					"query": [
+						{
+							"key": "grant_type",
+							"value": "refresh_token"
+						},
+						{
+							"key": "scope",
+							"value": null
+						},
+						{
+							"key": "refresh_token",
+							"value": "MDA2ZJU4YZITMTRIOC01MGU2LTKWYJCTZGY0ZGY3OWY5MZEY"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "authorization_test",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiIsImtpZCI6ImF1dGgiLCJ0eXAiOiJKV1QifQ.eyJhdWQiOiJ0ZXN0IiwiZXhwIjoxNjcwOTQwMjM5LCJzdWIiOiJ0ZXN0In0.7y-WnIklap38l1XVPkFdD4NmXpoamDc_D5Hb_F25JsJ7hJg7CerDeMyJ9f2wfRqieHt-hvC5wWpwqeWSIXYGMg",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/test/authorization",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"test",
+						"authorization"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "access_token_test",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/test/access_token?access_token=eyJhbGciOiJIUzUxMiIsImtpZCI6ImF1dGgiLCJ0eXAiOiJKV1QifQ.eyJhdWQiOiJ0ZXN0MiIsImV4cCI6MTY3MDk0MDM3OH0.XYS2I9l_ApEJmdfrrP6cIJcqTRiKOE5GJrcOu6P7-dHwKBsF15fZcCWvl0QqpqSTgOK79rt3TthtUOK7lmW2EQ",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"test",
+						"access_token"
+					],
+					"query": [
+						{
+							"key": "access_token",
+							"value": "eyJhbGciOiJIUzUxMiIsImtpZCI6ImF1dGgiLCJ0eXAiOiJKV1QifQ.eyJhdWQiOiJ0ZXN0MiIsImV4cCI6MTY3MDk0MDM3OH0.XYS2I9l_ApEJmdfrrP6cIJcqTRiKOE5GJrcOu6P7-dHwKBsF15fZcCWvl0QqpqSTgOK79rt3TthtUOK7lmW2EQ"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
